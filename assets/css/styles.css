@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    scroll-padding-top: 4rem; 
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff6ea ;
+ 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h2,
+  h3 {
+    font-size: 30px;
+    color: #ed3ef7;
+}
+
+p, nav ul li a{
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+article a img {
+    max-width: 20em;
+}
+
+header {
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    align-self: flex-start;
+    background-color: #bf23f0;
+    z-index: 9999;
+    color: #feecb3;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content {
+    flex: 100;
+   
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.Home {
+    text-transform: uppercase;
+}
+
+.Home a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    font-size: 18px;
+   
+    font-weight: 400;
+    text-decoration: none;
+   
+    color: #feecb3;;
+}
+   
+nav a:hover {
+    font-weight: bold;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+   
+    gap: 2rem;
+}
+   
+nav li {
+    list-style-type: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+   
+    padding: 20px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.profil-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 35%;
+}
+
+.tabel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tabel th{
+    text-align: left;
+    padding-right: 50px;
+}
+
+.tabel td{
+    text-align: left;
+}
+
+main {
+    padding: 20px;
+   
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #bf23f0;
+   
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Perangkat laptop kecil */
+@media screen and (max-width: 1200px) {
+    
+    main aside {
+        order: -1;
+    }
+    
+    main {
+      flex-flow: column nowrap;
+    }
+
+    article a img {
+        max-width: 500px;
+    }
+   
+    .profil-img {
+        width: 700px;
+        height: 700px;
+        object-fit: cover;
+        object-position: 0 35%;
+    }
+
+}
+   
+  /* Perangkat tablet */
+@media screen and (max-width: 780px) {
+   
+    main aside {
+        order: -1;
+    }
+
+    main aside {
+      justify-self: right;
+    }
+
+    .profil-img {
+        max-width: 500px;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: 0 35%;
+    }
+    
+}
+
+
+  /* Perangkat hp */
+@media screen and (max-width: 640px) {
+   
+    main aside {
+      align-self: stretch;
+      order: -1;
+    }
+
+    .profil-img {
+        max-width: 90%;
+        height: auto;
+        object-fit: cover;
+        object-position: 0 35%;
+    }
+
+    article a img {
+        max-width: 90%;
+    }
+
+    .tabel th{
+        padding-right: 0.5em;
+    }
+    
+}
